@@ -1,0 +1,90 @@
+
+/* buttons main container and buttons items styling */
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5rem;
+}
+
+.buttons > div{
+    color: black;
+    box-sizing: border-box;
+    box-shadow: 6px black;
+    width: 6rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 16px;
+    height: 4rem;
+    border: 1px solid black;
+    border-radius: 20%;
+    transition-property: box-shadow;
+    transition-timing-function: ease-in-out;
+}
+.buttons > div:hover{
+    color: whitesmoke;
+    box-shadow: 5px 5px 5px  rgba(48, 10, 86, 0.81);
+}
+
+/*---------------------Buttons End------------------------------*/
+
+/*------------------Info Block---------------------------*/
+.info{
+    /*display: grid;*/
+    border:1px solid grey;
+    border-radius: 5px;
+    width: 60%;
+    height: 85%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 5px 5px 8px 8px rgba(63, 63, 191, 0.46);
+    text-transform: uppercase;
+    /*grid-template-rows: repeat(6, 2rem);
+    grid-template-columns: 1fr 2fr; */
+    
+}
+
+
+.category{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+.category span{
+    margin-right: 6.3rem;
+}
+.category>select{
+    background-color: rgba(67, 94, 131, 0.64);
+    color: rgb(202, 220, 245);
+    width: 80%;
+}
+
+.inputElement{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(134, 32, 182, 0.788);
+    box-shadow: 0 1px 1px rgba(134, 32, 182, 0.075) inset, 0 0 8px rgba(134, 32, 182, 0.788);
+    outline: 0 none;
+}
+/*
+.inputElement>input:focus,.inputElement>textarea:focus{
+    border: 2px solid blueviolet;
+}*/
+.inputElement>input,.inputElement>textarea{
+    background-color: rgba(67, 94, 131, 0.64);
+    border-radius: 5px;
+    
+    
+}
+.inputElement>input::placeholder,.inputElement>textarea::placeholder,.category>select::placeholder{
+    color: rgb(202, 220, 245);
+    font-family: 'Lobster', cursive;
+
+}
+
+/*-----------------Info block End---------------------*/

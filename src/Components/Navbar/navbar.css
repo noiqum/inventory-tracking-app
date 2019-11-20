@@ -1,0 +1,18 @@
+.navbarContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.item-a,.item-b,.item-c,.item-d,.item-e{
+    margin-top: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.item-a:hover,.item-b:hover,.item-c:hover{
+    color: teal;
+    border-bottom: 2px solid black;
+    
+}
