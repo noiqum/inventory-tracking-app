@@ -52,7 +52,7 @@ class App extends React.Component{
         <Button onclick={this.clicked.bind(this,"delete")} func="delete"/>
         </div>
         <div className="info"><Info stateController={this.state.btnClicked}/></div>
-        <div className="footer">footer</div>
+        <div className="footer"></div>
       </Layout>
     );
   };
