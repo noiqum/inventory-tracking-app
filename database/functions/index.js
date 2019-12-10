@@ -52,6 +52,8 @@ app.get('/items',(req,res)=>{
     )
      .catch((err)=>console.error(err));
  });
+
+
 //delete an item from database
 app.delete('/itemU',(req,res)=>{
  let itemId=req.body.itemId;
@@ -67,8 +69,32 @@ app.delete('/itemU',(req,res)=>{
  )
     .catch((err)=>console.error(err));
 });
+
+
+ //update an item in database
  
- 
+ app.put('/itemUpdate',(req,res)=>{
+     let a=req.body.a;
+     let b=req.body.b;
+     let itemId=req.body.itemId;
+     admin
+     .firestore()
+     .collection('inventory')
+     .doc(itemId)
+     .update(
+         {
+            a:b
+         }
+     )
+     .then(
+         (doc)=>{
+         res.json({message:`${itemId} was updated`});
+         }
+     )
+     .catch((err)=>{
+         console.error(err);
+     })
+ });
 
 
  exports.api=functions.https.onRequest(app);

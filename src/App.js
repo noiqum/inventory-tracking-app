@@ -15,20 +15,15 @@ class App extends React.Component{
   state={
     btnClicked:" ",
     logst:"log out",
-    item: {
-      category:" ",
-      barcode:" ",
-      name:" ",
-      amount:null,
-      price:null,
-    }
+    
   }
 
     clicked = (func)=>{
     switch(func){
       case("add"):
       this.setState({btnClicked:"add"});
-      return console.log(this.state.btnClicked);
+      console.log(this.state.btnClicked);
+      break;
       case("use"):
       return this.setState({btnClicked:"use"});
       case("update"):
@@ -36,7 +31,7 @@ class App extends React.Component{
       case("delete"):
       return this.setState({btnClicked:"delete"});
     }
-    return console.log(this.state.btnClicked);
+  
   };
 
 
