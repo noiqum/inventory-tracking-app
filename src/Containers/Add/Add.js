@@ -15,13 +15,16 @@ class Add extends React.Component{
             amount:0,
             price:0
         }
+        this.onchange=this.onchange.bind(this);
     };
   
     onchange=(element,event)=>{
         switch(element){
             case("category"):
-            this.setState({Category:event.options[event.selectedIndex].text});
-            console.log(this.state.Category);
+            this.setState({Category:event.target.value},()=>{
+                console.log(this.state.Category);
+            });
+            
             break;
             case("barcode"):
             this.setState( {barcode:event.target.value}, ()=> {
@@ -46,7 +49,7 @@ class Add extends React.Component{
         }
     } 
  
-        
+       
    
 
     
@@ -55,7 +58,7 @@ class Add extends React.Component{
         return (
         <div>
         
-        <Category  value={["kitchen","office","maintance"]}></Category> 
+        <Category  onChange={this.onchange.bind(this,"category")}value={["kitchen","office","maintance"]}></Category> 
         <Input onChange={this.onchange.bind(this,"barcode")} label="barcode"inputtype="textarea" name="barcode" placeholder="barcode"></Input>
         <Input onChange={this.onchange.bind(this,"name")}label="item name"inputtype="input" type="text" name="name" placeholder="item name"></Input>
         <Input onChange={this.onchange.bind(this,"amount")}label="amount"inputtype="input" type="number" name="amount" placeholder="amount"></Input>
